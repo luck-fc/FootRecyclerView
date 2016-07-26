@@ -52,6 +52,12 @@ public class Model implements Parcelable {
     public Model() {
     }
 
+    public Model(int id, String name, String describe) {
+        this.id = id;
+        this.name = name;
+        this.describe = describe;
+    }
+
     @Override
     public int describeContents() {
         return 0;
