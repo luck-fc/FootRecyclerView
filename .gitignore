@@ -5,7 +5,7 @@
 /.idea/libraries
 /.idea/vcs.xml
 /.idea/misc.xml
-.DS_Store
 /build
-/captures
 .idea/
+/library/library.iml
+/*.iml

@@ -11,7 +11,7 @@ import com.luck.imp.IFootViewAdapter;
  * 邮箱：fc_dream@163.com
  * FootRecyclerView 只有一个ViewHolder的Adpater
  */
-public abstract class BaeSingleAdpater<T> extends FootViewAdapter{
+public abstract class BaeSingleAdpater<T> extends FootViewAdapter<T>{
 
     public BaeSingleAdpater(Activity activity) {
         super(activity,null);

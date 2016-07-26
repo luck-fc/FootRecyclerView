@@ -20,7 +20,7 @@ import java.lang.annotation.RetentionPolicy;
  * AS_TuHu_android
  * 拥有加载更多的适配器
  */
-public abstract class FootViewAdapter<T> extends BaseViewAdapter {
+public abstract class FootViewAdapter<T> extends BaseViewAdapter<T> {
 
 
     /**
