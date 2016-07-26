@@ -14,6 +14,7 @@ import java.util.Map;
  * 作者：luck on 2016/1/17 17:00
  * 邮箱：fc_dream@163.com
  * ViewHolder 基类
+ * 推荐使用 bindDataAndListener 来绑定数据
  */
 public class BaseViewHolder extends RecyclerView.ViewHolder {
 
@@ -79,4 +80,5 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
         getActivity().overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
         getActivity().startActivity(intent);
     }
+
 }

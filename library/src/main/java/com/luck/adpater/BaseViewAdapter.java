@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.luck.viewholder.base.BaseViewHolder;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +23,10 @@ public abstract class BaseViewAdapter<T> extends RecyclerView.Adapter {
     public BaseViewAdapter(Activity activity) {
         this.mActivity = activity;
         this.data = new ArrayList<>();
+    }
+
+    public  <T extends BaseViewHolder> T getViewHolder(RecyclerView.ViewHolder vh){
+        return (T)vh;
     }
 
     /**
