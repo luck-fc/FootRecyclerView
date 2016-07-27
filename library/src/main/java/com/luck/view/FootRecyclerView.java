@@ -55,7 +55,7 @@ public class FootRecyclerView extends RecyclerView {
     }
 
     /**
-     * 上下有加载更多
+     * 上下有加载更多  不监听滑动
      * @param mAdapter 适配器
      */
     public void init(final FootViewAdapter mAdapter) {
@@ -63,7 +63,7 @@ public class FootRecyclerView extends RecyclerView {
     }
 
     /**
-     * 上下有加载更多 如果需要设置 addOnScrollListener 请加入第3个参数
+     * 上下有加载更多 如果需要设置 addOnScrollListener 请加入第2个参数
      * @param mAdapter 适配器
      * @param onScrollListener 滑动事件回调
      */

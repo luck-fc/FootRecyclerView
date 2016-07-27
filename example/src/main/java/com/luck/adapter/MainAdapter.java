@@ -1,11 +1,11 @@
-package com.luck.adpter;
+package com.luck.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.luck.adpater.BaeSingleAdpater;
-import com.luck.entity.Model;
+import com.luck.adpater.BaseViewAdapter;
+import com.luck.entity.ModelEntity;
 import com.luck.viewholder.MainViewHolder;
 
 /**
@@ -13,10 +13,15 @@ import com.luck.viewholder.MainViewHolder;
  * 邮箱：fc_dream@163.com
  * BaseViewAdapter example
  */
-public class MainAdapter extends BaeSingleAdpater<Model> {
+public class MainAdapter extends BaseViewAdapter<ModelEntity> {
 
     public MainAdapter(Activity activity) {
         super(activity);
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onNewCreateViewHolder(ViewGroup parent, int viewType) {
+        return new MainViewHolder(parent);
     }
 
     @Override
@@ -28,7 +33,12 @@ public class MainAdapter extends BaeSingleAdpater<Model> {
     }
 
     @Override
-    public RecyclerView.ViewHolder onNewCreateViewHolder(ViewGroup parent) {
-        return new MainViewHolder(parent);
+    public int getNewItemCount() {
+        return data.size();
+    }
+
+    @Override
+    public int getNewItemViewType(int position) {
+        return 0;
     }
 }

@@ -8,7 +8,7 @@ import android.os.Parcelable;
  * 邮箱：fc_dream@163.com
  * FootRecyclerView 功能描述
  */
-public class Model implements Parcelable {
+public class ModelEntity implements Parcelable {
 
     /**
      * id
@@ -49,10 +49,10 @@ public class Model implements Parcelable {
     }
 
 
-    public Model() {
+    public ModelEntity() {
     }
 
-    public Model(int id, String name, String describe) {
+    public ModelEntity(int id, String name, String describe) {
         this.id = id;
         this.name = name;
         this.describe = describe;
@@ -72,21 +72,21 @@ public class Model implements Parcelable {
 
 
 
-    protected Model(Parcel in) {
+    protected ModelEntity(Parcel in) {
         this.id = in.readInt();
         this.name = in.readString();
         this.describe = in.readString();
     }
 
-    public static final Creator<Model> CREATOR = new Creator<Model>() {
+    public static final Creator<ModelEntity> CREATOR = new Creator<ModelEntity>() {
         @Override
-        public Model createFromParcel(Parcel source) {
-            return new Model(source);
+        public ModelEntity createFromParcel(Parcel source) {
+            return new ModelEntity(source);
         }
 
         @Override
-        public Model[] newArray(int size) {
-            return new Model[size];
+        public ModelEntity[] newArray(int size) {
+            return new ModelEntity[size];
         }
     };
 }

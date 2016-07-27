@@ -37,6 +37,18 @@ public abstract class FootViewAdapter<T> extends BaseViewAdapter<T> {
     private boolean isCloseFoot = false;
 
     /**
+     * 开启关闭Foot
+     *
+     * @param enabledFoot
+     */
+    public void setEnabledFoot(boolean enabledFoot) {
+        if (enabledFoot != isEnabledFoot) {
+            this.isEnabledFoot = enabledFoot;
+            notifyDataSetChanged();
+        }
+    }
+
+    /**
      * 开启关闭显示没有更多数据
      *
      * @param enabledFoot 为 false 时 不显示没有更多，但加载更多和点击加载会显示
@@ -55,9 +67,22 @@ public abstract class FootViewAdapter<T> extends BaseViewAdapter<T> {
     }
 
     protected IFootViewAdapter mIFVA;
-
+    public FootViewAdapter(Activity activity) {
+        super(activity);
+        init(null);
+    }
     public FootViewAdapter(Activity activity, IFootViewAdapter iFVA) {
         super(activity);
+        init(iFVA);
+    }
+
+    public FootViewAdapter(Activity activity, IFootViewAdapter iFVA,boolean enabledFoot) {
+        super(activity);
+        init(iFVA);
+        setEnabledFoot(enabledFoot);
+    }
+
+    private void init(IFootViewAdapter iFVA) {
         this.mIFVA = iFVA;
         this.foottext = mActivity.getResources().getString(R.string.loading_manual);
     }
@@ -99,7 +124,7 @@ public abstract class FootViewAdapter<T> extends BaseViewAdapter<T> {
                 }
                 break;
             case EFootType.FOOT_ERROR_LOADDATA:
-                this.foottext = mActivity.getResources().getString(R.string.loading_end);
+                this.foottext = mActivity.getResources().getString(R.string.loading_fail);
                 break;
         }
         notifyItemChanged(getItemCount() - 1);

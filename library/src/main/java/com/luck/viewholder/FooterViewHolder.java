@@ -1,6 +1,5 @@
 package com.luck.viewholder;
 
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -24,7 +23,7 @@ public class FooterViewHolder extends BaseViewHolder {
     private TextView footview_text;
 
     public FooterViewHolder(ViewGroup parent) {
-        super(LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_footerview, parent, false));
+        super(parent,R.layout.recycler_footerview);
         footview_layout = getView(R.id.footview_layout);
         footview_text = getView(R.id.footview_text);
         footview_pro = getView(R.id.footview_pro);

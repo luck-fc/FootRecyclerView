@@ -11,14 +11,19 @@ import com.luck.imp.IFootViewAdapter;
  * 邮箱：fc_dream@163.com
  * FootRecyclerView 只有一个ViewHolder的Adpater
  */
-public abstract class BaeSingleAdpater<T> extends FootViewAdapter<T>{
+public abstract class BaseSingleAdpater<T> extends FootViewAdapter<T>{
 
-    public BaeSingleAdpater(Activity activity) {
+    public BaseSingleAdpater(Activity activity) {
         super(activity,null);
         isShwoNoDataFoot(false);
     }
-    public BaeSingleAdpater(Activity activity, IFootViewAdapter iFVA) {
+
+    public BaseSingleAdpater(Activity activity, IFootViewAdapter iFVA) {
         super(activity,iFVA);
+    }
+
+    public BaseSingleAdpater(Activity activity, IFootViewAdapter iFVA,boolean enabledFoot) {
+        super(activity,iFVA,enabledFoot);
     }
 
     @Override
