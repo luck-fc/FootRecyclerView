@@ -42,7 +42,14 @@ public class PageUtil {
     }
 
     public void loadSuccess() {
+        loadSuccess(null);
+    }
+
+    public void loadSuccess(FootViewAdapter mAdapter) {
         this.isLoad = false;
+        if(mAdapter!=null){
+            mAdapter.setFootType(EFootType.FOOT_ERROR_LOADDATA);
+        }
     }
 
     public void loadFail() {
@@ -77,7 +84,7 @@ public class PageUtil {
         page = 0;
         isLoad = false;
         TotalPage = -1;
-        if (mAdapter != null) {
+        if (mAdapter != null && page >= TotalPage && page != 0 && TotalPage != -1) {
             mAdapter.setFootType(EFootType.FOOT_LOADING_ADD);
         }
     }
@@ -128,15 +135,10 @@ public class PageUtil {
         switch (isCanNext(mdapter)) {
             case beg:
                 if (mdapter != null) {
-                    if (page > TotalPage && page != 0 && TotalPage != -1) {
-                        mdapter.setFootType(EFootType.FOOT_NO_LOADDATA);
-                        return true;
+                    if (page == 1) {
+                        mdapter.setFootType(EFootType.FOOT_LOADING_ADD);
                     } else {
-                        if (page == 1) {
-                            mdapter.setFootType(EFootType.FOOT_LOADING_ADD);
-                        } else {
-                            mdapter.setFootType(EFootType.FOOT_LOADING_MORE);
-                        }
+                        mdapter.setFootType(EFootType.FOOT_LOADING_MORE);
                     }
                 }
                 break;

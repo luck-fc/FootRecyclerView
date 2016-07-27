@@ -154,7 +154,7 @@ public class ExampleActivity extends AppCompatActivity implements IFootViewAdapt
                     mPageUtil.loadFail(mAdpter);
                 } else {
                     mAdpter.addData(getPageData(mPageUtil.getPage()));
-                    mPageUtil.loadSuccess();
+                    mPageUtil.loadSuccess(mAdpter);
                 }
             }
         }, 500);
