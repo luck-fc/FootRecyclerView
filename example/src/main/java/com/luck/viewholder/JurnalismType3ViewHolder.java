@@ -32,8 +32,6 @@ public class JurnalismType3ViewHolder extends BaseViewHolder{
         viewholder_jurnalism_text3.setText(data.getTime());
         viewholder_jurnalism_layout1.removeAllViews();
         viewholder_jurnalism_layout1.addView(new JurnalismType1ViewHolder(viewholder_jurnalism_layout1).itemView);
-        viewholder_jurnalism_layout1.addView(new JurnalismType2ViewHolder(viewholder_jurnalism_layout1).itemView);
-        viewholder_jurnalism_layout1.addView(new JurnalismType3ViewHolder(viewholder_jurnalism_layout1).itemView);
     }
 
 }

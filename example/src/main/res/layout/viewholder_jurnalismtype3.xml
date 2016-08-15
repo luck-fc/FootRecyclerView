@@ -13,7 +13,7 @@
         android:id="@+id/viewholder_jurnalism_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ABCDEF"
+        android:textColor="#34dfdd"
         android:text="身份证复印件不加这几个字，小心倾家荡产！"
         android:textSize="15sp" />
 
@@ -25,15 +25,7 @@
         android:layout_marginTop="10dp"
         android:textColor="#ABCDEF"
         android:text="搜狐网"
-        android:textSize="15sp" />
-
-    <LinearLayout
-        android:id="@+id/viewholder_jurnalism_layout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="#1df348"
-        android:orientation="vertical"/>
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/viewholder_jurnalism_text3"
@@ -43,7 +35,24 @@
         android:layout_marginTop="10dp"
         android:textColor="#ABCDEF"
         android:text="2015年06月03日 14:35:24"
-        android:textSize="15sp" />
+        android:textSize="14sp" />
 
+    <TextView
+        android:id="@+id/viewholder_jurnalism_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewholder_jurnalism_text3"
+        android:layout_marginTop="10dp"
+        android:text="以下是嵌套的ViewHolder"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/viewholder_jurnalism_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewholder_jurnalism_text4"
+        android:layout_margin="10dp"
+        android:background="#1df348"
+        android:orientation="vertical"/>
 
 </RelativeLayout>
