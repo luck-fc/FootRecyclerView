@@ -2,12 +2,10 @@ package com.luck.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 
 import com.luck.adapter.MainAdapter;
 import com.luck.entity.ModelEntity;
 import com.luck.view.FootRecyclerView;
-import com.luck.view.RecycleViewDivider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private void initView(){
         mFootRecyclerView = (FootRecyclerView) findViewById(R.id.main_footrv);
         mMainAdpter = new MainAdapter(this);
-        mFootRecyclerView.addItemDecoration(new RecycleViewDivider(10,this, LinearLayoutManager.VERTICAL));
         mFootRecyclerView.init(mMainAdpter);
     }
 

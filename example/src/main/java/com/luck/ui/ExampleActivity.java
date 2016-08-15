@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
@@ -15,7 +14,6 @@ import com.luck.entity.JurnalismEntity;
 import com.luck.imp.IFootViewAdapter;
 import com.luck.uitl.PageUtil;
 import com.luck.view.FootRecyclerView;
-import com.luck.view.RecycleViewDivider;
 import com.luck.viewholder.JurnalismType1ViewHolder;
 import com.luck.viewholder.JurnalismType2ViewHolder;
 import com.luck.viewholder.JurnalismType3ViewHolder;
@@ -51,7 +49,6 @@ public class ExampleActivity extends AppCompatActivity implements IFootViewAdapt
 
     private void initView() {
         example_footrv = (FootRecyclerView) findViewById(R.id.example_footrv);
-        example_footrv.addItemDecoration(new RecycleViewDivider(5, this, LinearLayoutManager.VERTICAL));
         example_swipe = (SwipeRefreshLayout) findViewById(R.id.example_swipe);
         example_swipe.setColorSchemeColors(Color.BLUE,Color.RED,Color.GREEN);
         example_swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
