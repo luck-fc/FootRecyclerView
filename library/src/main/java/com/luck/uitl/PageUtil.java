@@ -48,7 +48,11 @@ public class PageUtil {
     public void loadSuccess(FootViewAdapter mAdapter) {
         this.isLoad = false;
         if(mAdapter!=null){
-            mAdapter.setFootType(EFootType.FOOT_ERROR_LOADDATA);
+            if (page >= TotalPage && page != 0 && TotalPage != -1) {
+                mAdapter.setFootType(EFootType.FOOT_NO_LOADDATA);
+            }else{
+                mAdapter.setFootType(EFootType.FOOT_LOADING_MORE);
+            }
         }
     }
 
@@ -85,7 +89,7 @@ public class PageUtil {
         isLoad = false;
         TotalPage = -1;
         if (mAdapter != null && page >= TotalPage && page != 0 && TotalPage != -1) {
-            mAdapter.setFootType(EFootType.FOOT_LOADING_ADD);
+            mAdapter.setFootType(EFootType.FOOT_LOADING_MORE);
         }
     }
 
