@@ -162,22 +162,22 @@ public class ExampleActivity extends AppCompatActivity implements IFootViewAdapt
         for (int i = 0; i < 10; i++) {
             JurnalismEntity data = new JurnalismEntity();
             if (i % 3 == 1 && i % 4==1) {
-                data.setTitlte("巴基斯坦高官：中国公民安全比自己生命更重要" + ((type == 1 || type == 3) ? "" : "第" + (page + 1) + "页数据第" + (i + 1) + "条数据"));
+                data.setTitlte("巴基斯坦高官：中国公民安全比自己生命更重要" + ((type == 1 || type == 3) ? "" : "第" + page + "页数据第" + (i + 1) + "条数据"));
                 data.setSource("中国新闻网");
                 data.setTime("2016年07月26日 17:01:20");
                 data.setType(1);
             } else if (i % 3 == 2 && i % 4==2) {
-                data.setTitlte("待宰老牛跪地哭泣如婴儿 感动屠厂工人凑钱买下送佛寺" + ((type == 1 || type == 3) ? "" : "第" + (page + 1) + "页数据第" + (i + 1) + "条数据"));
+                data.setTitlte("待宰老牛跪地哭泣如婴儿 感动屠厂工人凑钱买下送佛寺" + ((type == 1 || type == 3) ? "" : "第" + page + "页数据第" + (i + 1) + "条数据"));
                 data.setSource("凤凰科技");
                 data.setTime("2016年07月25日 09:13");
                 data.setType(2);
             } else if (i % 3 == 0 && i % 2 == 0) {
-                data.setTitlte("猫咪走失11年后终与主人团聚：这些年吃得很好" + ((type == 1 || type == 3) ? "" : "第" + (page + 1) + "页数据第" + (i + 1) + "条数据"));
+                data.setTitlte("猫咪走失11年后终与主人团聚：这些年吃得很好" + ((type == 1 || type == 3) ? "" : "第" + page + "页数据第" + (i + 1) + "条数据"));
                 data.setSource("中国新闻网");
                 data.setTime("2016年07月26日 13:10");
                 data.setType(3);
             } else {
-                data.setTitlte("超级黑洞竟然挑食 不吞噬僵尸行星震惊" + ((type == 1 || type == 3) ? "" : "第" + (page + 1) + "页数据第" + (i + 1) + "条数据"));
+                data.setTitlte("超级黑洞竟然挑食 不吞噬僵尸行星震惊" + ((type == 1 || type == 3) ? "" : "第" + page + "页数据第" + (i + 1) + "条数据"));
                 data.setSource("科技讯");
                 data.setTime("2016年07月26日 08:58");
                 data.setType(type % 3 + 1);
