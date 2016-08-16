@@ -1,16 +1,16 @@
 # FootRecyclerView
 Loaded with more FootRecyclerView
 
-<img src="https://github.com/luck-fc/FootRecyclerView/screenshot/device-2016-08-16-112026.png" width="33%"/> 
-<img src="https://github.com/luck-fc/FootRecyclerView/screenshot/device-2016-08-16-112626.png" width="33%"/> 
-<img src="https://github.com/luck-fc/FootRecyclerView/screenshot/device-2016-08-16-112652.png" width="33%"/> 
+<img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112026.png" width="33%"/> 
+<img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112626.png" width="33%"/> 
+<img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112652.png" width="33%"/> 
 
 开发者 (Developer)
 ----------------
 
 * luck-fc - <xiaoorchao@gmail.com>
 
-License
+**License**
 =======
 
     Copyright 2016 luck-fc, Inc.
