@@ -1,10 +1,66 @@
 # FootRecyclerView
 Loaded with more FootRecyclerView
 
+## 效果图
 <img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112026.png" width="33%"/> 
 <img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112616.png" width="33%"/> 
 <img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112652.png" width="33%"/> 
 
+## 用法
+引入library 
+
+（1）.xml加入布局
+```xml
+<com.luck.view.FootRecyclerView
+            android:id="@+id/example_footrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+```
+
+（2）适配器使用 
+    1.按业务选择继承的适配器 （一）（不需要展示多种类型的View适配器可继承自BaseViewAdapter<T> 重写onNewCreateViewHolder方法） （二）（需要展示多种类型的View适配器可继承自FootViewAdapter<T> 重写onNewBindViewHolder  getNewItemCount getNewItemViewType 方法 ) 注： T实体类 
+    2.重新自己需要的ViewHolder 为了更加方便建议继承自BaseViewHolder(封装了 （一）Intent跳转的goActivityByBaseType方法 （二）getActivity得到当前activity的方法 （三）getView初始化View的方法)
+
+（3）FootRecyclerView初始化
+  
+    //初始化绑定
+    FootRecyclerView example_footrv = (FootRecyclerView) findViewById(R.id.example_footrv);
+    FootViewAdapter mAdpter = new FootViewAdapter<T>//(自定义的适配器 继承自BaseSingleAdpater<T>或FootViewAdapter<T>)
+    example_footrv.init(mAdpter);//(更多重载方法请参考源码)
+    //需要分页 实现IFootViewAdapter接口
+    //重新onLoadMore();方法并调用
+    getData();
+    //全局初始化 
+    PageUtil mPageUtil=new PageUtil();
+    //在下拉刷新时 或从第一开始加载时调用
+    mPageUtil.init(mAdpter);
+    getData();
+    //在getData中 调用
+    f (mPageUtil.isLoadDataFail(mAdpter)) {
+        return;
+    }
+    if (mPageUtil.getPage() == 1) {
+        example_swipe.setRefreshing(true);
+    }
+    //在获取到数据后
+     if (mPageUtil.getPage() == 1) {
+        mPageUtil.setTotalPage(TotalPage, mAdpter);
+        example_swipe.setRefreshing(false);
+    }
+    if (mPageUtil.getPage() > 1 && new Random().nextInt(10) % 5 == 0) {
+        mPageUtil.loadFail(mAdpter);
+    } else {
+        mAdpter.addData(getPageData(mPageUtil.getPage()));
+        mPageUtil.loadSuccess(mAdpter);
+    }
+    
+##其他
+    如有疑问，请提issues
+
+##以后
+    该libary将会继续被维护，相信以后会封装得更方便便捷，敬请期待！
+    如有更好的方式，欢迎随时Pull requests
+    
 开发者 (Developer)
 ----------------
 
