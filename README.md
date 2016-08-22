@@ -32,7 +32,7 @@ example_footrv.init(mAdpter);//(更多重载方法请参考源码)
 getData();
 //全局初始化 
 PageUtil mPageUtil=new PageUtil();
-//在下拉刷新时 或从第一开始加载时调用
+//在下拉刷新时 或加载第一页之前调用
 mPageUtil.init(mAdpter);
 getData();
 //在getData中 调用
