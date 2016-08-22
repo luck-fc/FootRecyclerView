@@ -42,16 +42,15 @@ if (mPageUtil.getPage() == 1) {
     example_swipe.setRefreshing(true);
 }
 //在获取到数据后
+//（1）第一获取的分页的总页码数设置总页码
  if (mPageUtil.getPage() == 1) {
     mPageUtil.setTotalPage(TotalPage, mAdpter);
-    example_swipe.setRefreshing(false);
 }
-if (mPageUtil.getPage() > 1 && new Random().nextInt(10) % 5 == 0) {
-    mPageUtil.loadFail(mAdpter);
-} else {
-    mAdpter.addData(getPageData(mPageUtil.getPage()));
-    mPageUtil.loadSuccess(mAdpter);
-}
+//加载失败调用
+mPageUtil.loadFail(mAdpter);
+//加载成功后调用
+mAdpter.addData(getPageData(mPageUtil.getPage()));
+mPageUtil.loadSuccess(mAdpter);
 </code></pre>
 ##其他
  如有疑问，请提[issue](https://github.com/luck-fc/FootRecyclerView/issues)
