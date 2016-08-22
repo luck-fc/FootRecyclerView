@@ -16,11 +16,11 @@ Loaded with more FootRecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 ```
-
 （2）适配器使用 
+<pre>
     1.按业务选择继承的适配器 （一）（不需要展示多种类型的View适配器可继承自BaseViewAdapter<T> 重写onNewCreateViewHolder方法） （二）（需要展示多种类型的View适配器可继承自FootViewAdapter<T> 重写onNewBindViewHolder  getNewItemCount getNewItemViewType 方法 ) 注： T实体类 
     2.重新自己需要的ViewHolder 为了更加方便建议继承自BaseViewHolder(封装了 （一）Intent跳转的goActivityByBaseType方法 （二）getActivity得到当前activity的方法 （三）getView初始化View的方法)
-
+</pre>
 （3）FootRecyclerView初始化
 <pre><code>//初始化绑定
 FootRecyclerView example_footrv = (FootRecyclerView) findViewById(R.id.example_footrv);
