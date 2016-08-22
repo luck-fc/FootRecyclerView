@@ -55,8 +55,7 @@ if (mPageUtil.getPage() > 1 && new Random().nextInt(10) % 5 == 0) {
 }
 </code></pre>
 ##其他
-    如有疑问，请提[issue](https://github.com/luck-fc/FootRecyclerView/issues)
-
+ 如有疑问，请提[issue](https://github.com/luck-fc/FootRecyclerView/issues)
 ##以后
     该libary将会继续被维护，相信以后会封装得更方便便捷，敬请期待！
     如有更好的方式，欢迎随时Pull requests
