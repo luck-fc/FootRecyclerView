@@ -22,8 +22,7 @@ Loaded with more FootRecyclerView
     2.重新自己需要的ViewHolder 为了更加方便建议继承自BaseViewHolder(封装了 （一）Intent跳转的goActivityByBaseType方法 （二）getActivity得到当前activity的方法 （三）getView初始化View的方法)
 
 （3）FootRecyclerView初始化
-<pre><code>
-//初始化绑定
+<pre><code>//初始化绑定
 FootRecyclerView example_footrv = (FootRecyclerView) findViewById(R.id.example_footrv);
 FootViewAdapter mAdpter = new FootViewAdapter<T>//(自定义的适配器 继承自BaseSingleAdpater<T>或FootViewAdapter<T>)
 example_footrv.init(mAdpter);//(更多重载方法请参考源码)
