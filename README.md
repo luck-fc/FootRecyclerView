@@ -8,7 +8,19 @@ Loaded with more FootRecyclerView
 
 ## 用法
 引入library 
-
+root build.gradle加入
+```xml
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+项目 build.gradle加入
+```xml
+    compile 'com.github.luck-fc:FootRecyclerView:Tag1.0'
+```
 （1）.xml加入布局
 ```xml
 <com.luck.view.FootRecyclerView
