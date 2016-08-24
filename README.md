@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/luck-fc/FootRecyclerView.svg)](https://jitpack.io/#luck-fc/FootRecyclerView)
 # FootRecyclerView
 Loaded with more FootRecyclerView
 
