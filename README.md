@@ -21,7 +21,7 @@ allprojects {
 ```
 项目 build.gradle加入
 ```xml
-    compile 'com.github.luck-fc:FootRecyclerView:Tag1.0'
+    compile 'com.github.luck-fc:FootRecyclerView:tag1.0'
 ```
 （1）.xml加入布局
 ```xml
