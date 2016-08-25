@@ -48,10 +48,11 @@ PageUtil mPageUtil=new PageUtil();
 //在下拉刷新时 或加载第一页之前调用
 mPageUtil.init(mAdpter);
 getData();
-//在getData中 调用
+//在getData中 调用加载下一页，页码数会加1。
 f (mPageUtil.isLoadDataFail(mAdpter)) {
     return;
 }
+//mPageUtil.getPage() 获取当前页码数，比如是第一页用于显示刷新
 if (mPageUtil.getPage() == 1) {
     example_swipe.setRefreshing(true);
 }
