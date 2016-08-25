@@ -67,8 +67,9 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
     protected void goActivityByBaseType(Map<String,Object> map, Class<?> toclass){
         Intent intent = new Intent(getActivity(),toclass);
         if(map!=null){
-            for (String key : map.keySet()) {
-                Object o = map.get(key);
+            for (Map.Entry< String, Object> entry  : map.entrySet()) {
+                String key = entry.getKey();
+                Object o =entry.getValue();
                 if (o instanceof Integer) {
                     int value = ((Integer) o).intValue();
                     intent.putExtra(key, value);

@@ -126,6 +126,9 @@ public abstract class FootViewAdapter<T> extends BaseViewAdapter<T> {
             case EFootType.FOOT_ERROR_LOADDATA:
                 this.foottext = mActivity.getResources().getString(R.string.loading_fail);
                 break;
+            default:
+                this.foottext = mActivity.getResources().getString(R.string.loading_manual);
+                break;
         }
         notifyItemChanged(getItemCount() - 1);
     }
