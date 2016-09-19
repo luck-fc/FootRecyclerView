@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/luck-fc/FootRecyclerView.svg?branch=master)](https://travis-ci.org/luck-fc/FootRecyclerView)
 [![](https://jitpack.io/v/luck-fc/FootRecyclerView.svg)](https://jitpack.io/#luck-fc/FootRecyclerView)
 [![API](https://img.shields.io/badge/API-9%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=9)
+<a href="http://www.methodscount.com/?lib=com.github.luck-fc%3AFootRecyclerView%3Atag1.0"><img src="https://img.shields.io/badge/Methods and size-core: 172 | deps: 9615 | 20 KB-e91e63.svg"/></a>
 # FootRecyclerView
 Loaded with more FootRecyclerView
 
