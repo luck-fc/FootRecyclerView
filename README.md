@@ -1,4 +1,3 @@
-https://travis-ci.org/luck-fc/FootRecyclerView.svg?branch=master
 [![Build Status](https://travis-ci.org/luck-fc/FootRecyclerView.svg?branch=master)](https://travis-ci.org/luck-fc/FootRecyclerView)
 [![](https://jitpack.io/v/luck-fc/FootRecyclerView.svg)](https://jitpack.io/#luck-fc/FootRecyclerView)
 [![API](https://img.shields.io/badge/API-9%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=9)
