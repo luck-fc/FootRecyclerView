@@ -43,33 +43,44 @@ allprojects {
 FootRecyclerView example_footrv = (FootRecyclerView) findViewById(R.id.example_footrv);
 FootViewAdapter mAdpter = new FootViewAdapter<T>//(自定义的适配器 继承自BaseSingleAdpater<T>或FootViewAdapter<T>)
 example_footrv.init(mAdpter);//(更多重载方法请参考源码)
+
 //需要分页 实现IFootViewAdapter接口
+
 //重新onLoadMore();方法并调用
 getData();
+
 //全局初始化 
 PageUtil mPageUtil=new PageUtil();
+
 //在下拉刷新时 或加载第一页之前调用
 mPageUtil.init(mAdpter);
 getData();
+
 //在getData中 调用加载下一页，页码数会加1。
 f (mPageUtil.isLoadDataFail(mAdpter)) {
     return;
 }
+
 //mPageUtil.getPage() 获取当前页码数，比如是第一页用于显示刷新
 if (mPageUtil.getPage() == 1) {
     example_swipe.setRefreshing(true);
 }
+
 //在获取到数据后
 //（1）第一获取的分页的总页码数设置总页码
  if (mPageUtil.getPage() == 1) {
     mPageUtil.setTotalPage(TotalPage, mAdpter);
 }
+
 //加载失败调用
 mPageUtil.loadFail(mAdpter);
+
 //加载成功后调用
 mAdpter.addData(getPageData(mPageUtil.getPage()));
 mPageUtil.loadSuccess(mAdpter);
+
 </code></pre>
+
 ##其他
  如有疑问，请提[issue](https://github.com/luck-fc/FootRecyclerView/issues)
 ##以后
