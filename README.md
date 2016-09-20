@@ -5,8 +5,6 @@
 # FootRecyclerView
 Loaded with more FootRecyclerView
 
-An HTTP & HTTP/2 client for Android and Java applications. For more information see [the website][1] and [the wiki][2].
-
 ## 效果图
 <img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112026.png" width="33%"/> 
 <img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112616.png" width="33%"/> 
