@@ -37,6 +37,36 @@
 <img src="static/device-2016-08-16-112652.png" width="33%"> </p>
 
 <h2>
+<a id="功能点" class="anchor" href="#%E5%8A%9F%E8%83%BD%E7%82%B9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>功能点</h2>
+
+<pre>
+#1. 封装BaseViewHolder
+（1）得到当前对应的Ativity getAtivity()
+（2） 初始化view用的 getView(int viewId)   getView(View view,int viewId) 
+（3）Intent 跳转封装 goActivityByBaseType(Map map, Class&gt; toclass)
+#2. 封装加载更多的FooterViewHolder 
+（1）支持是否显示隐藏 isShow() 
+#3.封装BaseViewAdapter
+（1）提供强制转换为指定ViewHolder的方法getViewHolder(RecyclerView.ViewHolder vh)
+（2）提供获取所有数据的方法getData()
+（3）提供得到指定索引对于的data的单个对象getDataT
+（4）修改data的某个对应下标的对象并通知刷新
+（5）清空data数据clear()
+（6）添加数据到data addData(List datas)并通知刷新
+（7）添加数据到data addDataNotNotify(List datas)不通知刷新
+（8）修改数据data数据setData(List data)
+（9）提供需要重新的抽象方法  onNewBindViewHolder  getNewItemCount getNewItemViewType
+#4.封装FootViewAdapter继承自BaseViewAdapter
+（1）支持是否显示foot setEnabledFoot(boolean enabledFoot)
+（2）可以开启关闭除（没有更多了）这提示不显示其他提示会显示的foot isShwoNoDataFoot(boolean enabledFoot)
+（3）@FootType public void setFootType(int type) 设置foot的状态
+#5.封装FootRecyclerView继承自v7向下包的RecyclerView
+（1）上下滑动初始化init(Adapter mAdapter)  注：mAdapter非继承自FootViewAdapter则无加载更多
+（2）上下加载并设置滑动监听 init(final FootViewAdapter mAdapter,final OnScrollListener onScrollListener)
+（3）滑动RecyclerView到某个item的位置 scrollToPosition(int position)
+</pre>
+
+<h2>
 <a id="用法" class="anchor" href="#%E7%94%A8%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>用法</h2>
 
 <p>引入library 
