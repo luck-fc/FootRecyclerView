@@ -4,7 +4,8 @@
 <a href="http://www.methodscount.com/?lib=com.github.luck-fc%3AFootRecyclerView%3Atag1.0"><img src="https://img.shields.io/badge/Methods and size-core: 172 | deps: 9615 | 20 KB-e91e63.svg"/></a>
 # FootRecyclerView
 Loaded with more FootRecyclerView
-拥有分页的RecyclerView
+
+拥有分页功能的RecyclerView
 
 ## 效果图
 <img src="https://github.com/luck-fc/FootRecyclerView/blob/master/screenshot/device-2016-08-16-112026.png" width="33%"/> 
